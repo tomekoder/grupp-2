@@ -1,0 +1,232 @@
+/*hamburger meny :start*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "EB Garamond", sans-serif;
+  background-color: #8d8638;
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.header {
+  background-color: #7f3004;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  min-height: 60px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: -1.5px;
+  font-weight: 500;
+}
+
+.nav {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 40px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav__item {
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  transition: all 0.4s;
+}
+.nav__link:hover,
+.nav__link:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  height: 2px;
+  width: 27px;
+  background: #fff;
+  margin: 5px 0;
+  opacity: 0.8;
+  transform: all 0.3s ease-in-out;
+}
+
+.nav--open {
+  transform: translate(0) !important;
+}
+
+.hamburger--open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/*hamburger meny :stop*/
+----------------------------------------------------
+
+
+
+/* Main CSS starter her*/
+main {
+}
+
+h1,
+h2 {
+  text-shadow: 2px 2px rgb(83, 83, 83);
+}
+.menuSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuBackground {
+  background-color: #b4901e;
+  background-image: url(/Menu/Frame1.png);
+  background-size: cover;
+  width: 1090px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.menuText {
+  padding-top: 50px;
+  text-align: center;
+}
+
+/* main css ferdig her */
+---------------------------------------------------- footer {
+  background-color: #7f3004;
+}
+
+/* booking start */
+.booking {
+  background-color: #7f3004;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  background: #7f3004;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px auto;
+  width: 75%;
+}
+
+.form-container button {
+  background-color: #8d8638;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #b4901e;
+}
+
+.reservation-list {
+  max-width: 500px;
+  background: white;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 40px;
+}
+
+.reservation-list h2 {
+  margin-bottom: 20px;
+}
+
+.reservation-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reservation-list li {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.reservation-list li:last-child {
+  border-bottom: none;
+}
+
+/* hamburger start */
+@media (max-width: 650px) {
+  .nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #7f3004;
+    width: 100%;
+    padding: 10px 0 25px;
+    transform: translateX(-100%);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/* hamburger stop */

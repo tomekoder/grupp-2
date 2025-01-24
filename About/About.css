@@ -1,0 +1,425 @@
+/** Universal **/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "EB Garamond", sans-serif;
+  background-color: #8d8638;
+  height: 100vh;
+  padding-top: 60px;
+  margin: 0;
+  color: white;
+}
+
+.header {
+  background-color: #7f3004;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  min-height: 60px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: -1.5px;
+  font-weight: 500;
+}
+
+.nav {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.nav__item {
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  transition: all 0.4s;
+  font-weight: bold;
+}
+.nav__link:hover,
+.nav__link:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  height: 2px;
+  width: 27px;
+  background: #fff;
+  margin: 5px 0;
+  opacity: 0.8;
+  transform: all 0.3s ease-in-out;
+}
+
+.nav--open {
+  transform: translate(0) !important;
+}
+
+.hamburger--open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 650px) {
+  .nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #7f3004;
+    width: 100%;
+    padding: 10px 0 25px;
+    transform: translateX(-100%);
+  }
+
+  .navlist {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .navlink {
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 1439px) {
+  .logo {
+    font-size: x-large;
+  }
+  .nav__link {
+    font-size: large;
+  }
+}
+
+/** Hamburger menu and header end*/
+
+section {
+  height: 100vh;
+}
+
+.OwnerSection {
+  margin-top: 100px;
+  height: 90vh;
+}
+
+.AboutDirection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.AboutBox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  background-color: #7f3004;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: solid 2px black;
+  font-size: 13.25px;
+}
+
+.AboutHeader {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.AboutText {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+img {
+  border: solid 2px black;
+}
+
+.ImageOwner {
+  height: 500px;
+}
+
+@media (min-width: 1079px) {
+  .AboutBox {
+    width: 41.5%;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1439px) {
+  .AboutText {
+    font-size: 16px;
+  }
+  .OwnerSection {
+    height: 85vh;
+  }
+  .AboutBox {
+    width: 40%;
+  }
+}
+
+@media (max-width: 450px) {
+  .OwnerSection {
+    height: 207vh;
+    margin-top: 50px;
+  }
+  .AboutDirection {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .AboutBox {
+    width: 100%;
+  }
+  .ImageOwner {
+    height: auto;
+  }
+  .AboutText {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 376px) {
+  .OwnerSection {
+    height: 210vh;
+  }
+}
+
+@media (max-width: 321px) {
+  .OwnerSection {
+    height: 218vh;
+  }
+}
+
+/** About Us End **/
+
+.DescriptionSection {
+  height: 30vh;
+}
+
+.DescriptionLocation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DescriptionText {
+  width: 85%;
+  background-color: #7f3004;
+  padding: 20px 20px 20px 20px;
+  border: solid 2px black;
+  font-weight: bold;
+}
+
+@media (min-width: 1439px) {
+  .DescriptionText {
+    width: 77.75%;
+    font-size: large;
+  }
+}
+
+@media (max-width: 450px) {
+  .DescriptionText {
+    width: 100%;
+  }
+  .DescriptionSection {
+    height: 44vh;
+  }
+}
+
+@media (max-width: 376px) {
+  .DescriptionSection {
+    height: 49vh;
+  }
+}
+
+@media (max-width: 321px) {
+  .DescriptionSection {
+    height: 56vh;
+  }
+}
+
+/** Desctption End **/
+
+.ExpectSection {
+  height: 95vh;
+}
+
+.ExpectDirection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ExpectText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  width: 42%;
+  background-color: #7f3004;
+  padding: 20px 20px 20px 20px;
+  border: solid 2px black;
+  font-weight: bold;
+}
+
+.ExpectImages {
+  width: 36%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ImageInside {
+  height: 250px;
+}
+
+.ImageBand {
+  height: 250px;
+}
+
+@media (min-width: 1079px) {
+  .ExpectText {
+    gap: 60px;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1439px) {
+  .ExpectText {
+    width: 35.75%;
+    font-size: large;
+    gap: 65px;
+  }
+  .ExpectImages {
+    width: 31%;
+  }
+  .ExpectSection {
+    height: 85vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .ExpectSection {
+    height: 200vh;
+  }
+  .ExpectDirection {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .ExpectText {
+    width: 100%;
+  }
+  .ExpectImages {
+    gap: 50px;
+    width: 100%;
+  }
+  .ImageBand {
+    height: auto;
+  }
+  .ImageInside {
+    height: auto;
+  }
+}
+
+@media (max-width: 376px) {
+  .ExpectImages {
+    gap: 60px;
+  }
+  .ExpectSection {
+    height: 197vh;
+  }
+}
+
+@media (max-width: 321px) {
+  .ExpectSection {
+    height: 196vh;
+  }
+}
+
+/** Expect section end**/
+
+.TavernLocation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TavernImage {
+  width: 85%;
+}
+
+@media (min-width: 1439px) {
+  .TavernImage {
+    width: 77.75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .TavernImage {
+    width: 100%;
+  }
+  .TavernSection {
+    height: 49vh;
+  }
+}
+
+@media (max-width: 376px) {
+  .TavernSection {
+    height: 47vh;
+  }
+}
+
+@media (max-width: 321px) {
+  .TavernSection {
+    height: 41vh;
+  }
+}
+
+/** tavern image end **/
